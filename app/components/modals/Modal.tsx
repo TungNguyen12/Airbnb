@@ -4,7 +4,7 @@ import { useCallback } from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import { IoMdClose } from 'react-icons/io'
-import Button from '../navbar/Button'
+import Button from '../Button'
 
 interface ModalProps {
   isOpen?: boolean
@@ -119,6 +119,7 @@ const Modal: React.FC<ModalProps> = ({
                     onClick={handleSubmit}
                   />
                 </div>
+                {footer}
               </div>
             </div>
           </div>
