@@ -8,8 +8,14 @@ export async function getListings() {
       },
     })
 
-    return listings
-  } catch (error: any) {
-    throw new Error(error)
+    const safeListings = listings.map((listing) => ({
+      ...listing,
+      createdAt: listing.createdAt.toISOString(),
+    }))
+
+    return safeListings
+  } catch (error) {
+    console.log(error)
+    throw new Error('error')
   }
 }

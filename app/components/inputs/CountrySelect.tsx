@@ -2,7 +2,6 @@
 
 import useCountries from '@/app/hooks/useCountries'
 import Select from 'react-select'
-import Map from '../Map'
 
 export type CountrySelectValue = {
   flag: string
