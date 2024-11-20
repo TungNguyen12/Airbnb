@@ -28,7 +28,6 @@ const useFavorite = ({ listingId, currentUser }: IUseFavorite) => {
       e.stopPropagation()
 
       if (!currentUser) {
-        console.log(currentUser)
         return loginModal.onOpen()
       }
 
