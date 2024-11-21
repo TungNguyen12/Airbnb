@@ -31,7 +31,7 @@ export default async function getListingById(params: IParams) {
       },
     }
   } catch (error) {
-    console.log(error)
-    throw new Error('error')
+    console.log(error, 'error 😭 at getListingById')
+    throw new Error('error 😭 at getListingById')
   }
 }

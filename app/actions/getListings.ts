@@ -87,8 +87,8 @@ export async function getListings(params: IListingsParams) {
     }))
 
     return safeListings
-  } catch (error) {
-    console.log(error)
-    throw new Error('error')
+  } catch (error: any) {
+    console.log(error, 'error 😭 at getListing')
+    throw new Error('error error 😭 at getListing')
   }
 }
