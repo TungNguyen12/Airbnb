@@ -1,5 +1,6 @@
 'use client'
 
+
 import { SafeListing, SafeReservation, SafeUser } from '@/app/types'
 import { Range } from 'react-date-range'
 import toast from 'react-hot-toast'
@@ -7,10 +8,12 @@ import axios from 'axios'
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { differenceInCalendarDays, eachDayOfInterval } from 'date-fns'
 
+
 import { categories } from '@/app/components/navbar/Categories'
 import Container from '@/app/components/Container'
 import ListingHead from '@/app/components/listings/ListingHead'
 import ListingInfo from '@/app/components/listings/ListingInfo'
+
 import useLoginModal from '@/app/hooks/useLoginModal'
 import { useRouter } from 'next/navigation'
 import ListingReservation from '@/app/components/listings/ListingReservation'
@@ -23,6 +26,8 @@ const initialDateRange = {
 
 interface ListingClientProps {
   reservations?: SafeReservation[]
+
+
   listing: SafeListing & {
     user: SafeUser
   }
@@ -31,6 +36,7 @@ interface ListingClientProps {
 
 const ListingClient: React.FC<ListingClientProps> = ({
   listing,
+
   reservations = [],
   currentUser,
 }) => {
@@ -124,6 +130,7 @@ const ListingClient: React.FC<ListingClientProps> = ({
               locationValue={listing.locationValue}
             />
           </div>
+
           <div
             className='order-first
             mb-10

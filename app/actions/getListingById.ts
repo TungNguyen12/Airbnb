@@ -5,6 +5,7 @@ interface IParams {
 }
 
 export default async function getListingById(params: IParams) {
+
   const { listingId } = params
   try {
     const listing = await prisma.listing.findUnique({

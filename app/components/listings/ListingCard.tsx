@@ -1,7 +1,9 @@
 'use client'
 
 import useCountries from '@/app/hooks/useCountries'
+
 import { SafeListing, SafeReservation, SafeUser } from '@/app/types'
+
 
 import { useRouter } from 'next/navigation'
 import { useCallback, useMemo } from 'react'
@@ -12,7 +14,9 @@ import Button from '../Button'
 
 export interface ListingCardProps {
   data: SafeListing
+
   reservation?: SafeReservation
+        
   onAction?: (id: string) => void
   disabled?: boolean
   actionLabel?: string
